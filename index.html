@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cubo Mágico</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<style type="text/css">
+		.teste{
+			background-color: rgb(136,136,136);
+			border-color: black;
+			border: 3px solid black;
+			height: 65px;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+        	var i = [];
+        	result = new Array();
+            function selecionar(k, j){
+                switch(i[j]){
+                	case 1:
+                		document.getElementById(k).style.background = "#FF0000";
+                		result[j] = "R";
+                		break;
+                	case 2:
+                		document.getElementById(k).style.background = "#FFFF00";
+                		result[j] = "L";
+                		break;
+                	case 3:
+                		document.getElementById(k).style.background = "#FF6600";
+                		result[j] = "U";
+                		break;
+                	case 4:
+                		document.getElementById(k).style.background = "#00FF00";
+                		result[j] = "F";
+                		break;
+                	case 5:
+                		document.getElementById(k).style.background = "#0000FF";
+                		result[j] = "B";
+                		break;
+                	case 6:
+                		document.getElementById(k).style.background = "#FFFFFF";
+                		result[j] = "D";
+                		break;
+                	default:
+                		i[j] = 0;
+                }
+                result[4]  = "U"; 
+                result[13] = "R";
+                result[22] = "F";  
+                result[31] = "L";
+                result[40] = "B";
+                result[49] = "D";
+                i[j]++;
+                document.getElementById("oi").innerHTML = result;
+            }
+        </script>
+	<div class="container col-md-12">
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-3">
+				<div onclick="selecionar(this.id, 0);" class="col-md-4 teste" id="div_0"></div>
+				<div onclick="selecionar(this.id, 1);" class="col-md-4 teste" id="div_1"></div>
+				<div onclick="selecionar(this.id, 2);" class="col-md-4 teste" id="div_2"></div>
+				<div onclick="selecionar(this.id, 3);" class="col-md-4 teste" id="div_3"></div>
+				<div class="col-md-4 teste" style="background-color: #FFFF00"></div>
+				<div onclick="selecionar(this.id, 5);" class="col-md-4 teste" id="div_5"></div>
+				<div onclick="selecionar(this.id, 6);" class="col-md-4 teste" id="div_6"></div>
+				<div onclick="selecionar(this.id, 7);" class="col-md-4 teste" id="div_7"></div>
+				<div onclick="selecionar(this.id, 8);" class="col-md-4 teste" id="div_8"></div>
+			</div>
+			<div class="col-md-6">
+				<p id="oi"></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div onclick="selecionar(this.id, 9);" class="col-md-4 teste" id="div_9"></div>
+				<div onclick="selecionar(this.id, 10);" class="col-md-4 teste" id="div_10"></div>
+				<div onclick="selecionar(this.id, 11);" class="col-md-4 teste" id="div_11"></div>
+				<div onclick="selecionar(this.id, 12);" class="col-md-4 teste" id="div_12"></div>
+				<div class="col-md-4 teste" style="background-color: #FF0000"></div>
+				<div onclick="selecionar(this.id, 14);" class="col-md-4 teste" id="div_14"></div>
+				<div onclick="selecionar(this.id, 15);" class="col-md-4 teste" id="div_15"></div>
+				<div onclick="selecionar(this.id, 16);" class="col-md-4 teste" id="div_16"></div>
+				<div onclick="selecionar(this.id, 17);" class="col-md-4 teste" id="div_17"></div>
+			</div>
+			<div class="col-md-3">
+				<div onclick="selecionar(this.id, 18);" class="col-md-4 teste" id="div_18"></div>
+				<div onclick="selecionar(this.id, 19);" class="col-md-4 teste" id="div_19"></div>
+				<div onclick="selecionar(this.id, 20);" class="col-md-4 teste" id="div_20"></div>
+				<div onclick="selecionar(this.id, 21);" class="col-md-4 teste" id="div_21"></div>
+				<div class="col-md-4 teste" style="background-color: #00FF00"></div>
+				<div onclick="selecionar(this.id, 23);" class="col-md-4 teste" id="div_23"></div>
+				<div onclick="selecionar(this.id, 24);" class="col-md-4 teste" id="div_24"></div>
+				<div onclick="selecionar(this.id, 25);" class="col-md-4 teste" id="div_25"></div>
+				<div onclick="selecionar(this.id, 26);" class="col-md-4 teste" id="div_26"></div>
+			</div>
+			<div class="col-md-3">
+				<div onclick="selecionar(this.id, 27);" class="col-md-4 teste" id="div_27"></div>
+				<div onclick="selecionar(this.id, 28);" class="col-md-4 teste" id="div_28"></div>
+				<div onclick="selecionar(this.id, 29);" class="col-md-4 teste" id="div_29"></div>
+				<div onclick="selecionar(this.id, 30);" class="col-md-4 teste" id="div_30"></div>
+				<div class="col-md-4 teste" style="background-color: #FF6600"></div>
+				<div onclick="selecionar(this.id, 32);" class="col-md-4 teste" id="div_32"></div>
+				<div onclick="selecionar(this.id, 33);" class="col-md-4 teste" id="div_33"></div>
+				<div onclick="selecionar(this.id, 34);" class="col-md-4 teste" id="div_34"></div>
+				<div onclick="selecionar(this.id, 35);" class="col-md-4 teste" id="div_35"></div>
+			</div>
+			<div class="col-md-3">
+				<div onclick="selecionar(this.id, 36);" class="col-md-4 teste" id="div_36"></div>
+				<div onclick="selecionar(this.id, 37);" class="col-md-4 teste" id="div_37"></div>
+				<div onclick="selecionar(this.id, 38);" class="col-md-4 teste" id="div_38"></div>
+				<div onclick="selecionar(this.id, 39);" class="col-md-4 teste" id="div_39"></div>
+				<div class="col-md-4 teste" style="background-color: #0000FF"></div>
+				<div onclick="selecionar(this.id, 41);" class="col-md-4 teste" id="div_41"></div>
+				<div onclick="selecionar(this.id, 42);" class="col-md-4 teste" id="div_42"></div>
+				<div onclick="selecionar(this.id, 43);" class="col-md-4 teste" id="div_43"></div>
+				<div onclick="selecionar(this.id, 44);" class="col-md-4 teste" id="div_44"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-3">
+				<div onclick="selecionar(this.id, 45);" class="col-md-4 teste" id="div_45"></div>
+				<div onclick="selecionar(this.id, 46);" class="col-md-4 teste" id="div_46"></div>
+				<div onclick="selecionar(this.id, 47);" class="col-md-4 teste" id="div_47"></div>
+				<div onclick="selecionar(this.id, 48);" class="col-md-4 teste" id="div_48"></div>
+				<div class="col-md-4 teste" style="background-color: #FFFFFF"></div>
+				<div onclick="selecionar(this.id, 50);" class="col-md-4 teste" id="div_50"></div>
+				<div onclick="selecionar(this.id, 51);" class="col-md-4 teste" id="div_51"></div>
+				<div onclick="selecionar(this.id, 52);" class="col-md-4 teste" id="div_52"></div>
+				<div onclick="selecionar(this.id, 53);" class="col-md-4 teste" id="div_53"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
